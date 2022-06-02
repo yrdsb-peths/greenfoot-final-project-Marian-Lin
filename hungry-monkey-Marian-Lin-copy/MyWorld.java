@@ -21,7 +21,17 @@ public class MyWorld extends World
         Monkey monkey = new Monkey();
         addObject(monkey,300,200);
         
+        createBanana();
+    }
+    
+    /**
+     * create a new banana at random location at anywhere of the screen.
+     */
+    public void createBanana()
+    {
         Banana banana = new Banana();
-        addObject(banana,300,0);
+        int x =Greenfoot.getRandomNumber(600);
+        int y =Greenfoot.getRandomNumber(200);
+        addObject(banana,x,y);
     }
 }

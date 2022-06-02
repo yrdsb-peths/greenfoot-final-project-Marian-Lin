@@ -15,6 +15,7 @@ public class Monkey extends Actor
     public void act()
     {
         // Add your action code here.
+        //moving monkey.
         if(Greenfoot.isKeyDown("a"))
         {
             move(-3);
@@ -25,5 +26,30 @@ public class Monkey extends Actor
             move(3);
             
         }
+        if(Greenfoot.isKeyDown("w"))
+        {
+            setLocation(this.getX(), this.getY()-3);
+        }
+        if(Greenfoot.isKeyDown("s"))
+        {
+            setLocation(this.getX(), this.getY()+3);
+        }
+        
+        //move banana if monkey eat it
+        eat();
+    }
+    /**
+     * spawn a new banana if banana has been eaten.
+     */
+    public void eat()
+    {
+        
+        if(isTouching(Banana.class))
+        {
+            removeTouching(Banana.class);
+            MyWorld world =(MyWorld) getWorld();
+            world.createBanana();
+        }
+        
     }
 }
