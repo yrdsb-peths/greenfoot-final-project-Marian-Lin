@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    public int score = 0;
+    Label scoreLabel;    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -18,12 +19,33 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         
+        //create the monkey object
         Monkey monkey = new Monkey();
         addObject(monkey,300,200);
         
+        //create a label
+        scoreLabel = new Label(0,80);
+        addObject(scoreLabel,40,40);
+        
         createBanana();
     }
+    /**
+     * when the game over, print out "Game Over".
+     */
+    public void gameOver()
+    {
+        Label gameOverLabel = new Label("Game Over",100);
+        addObject(gameOverLabel,300,200);
+    }
     
+    /**
+     * Increase score
+     */
+    public void increaseScore()
+    {
+        score++;
+        scoreLabel.setValue(score);
+    }
     /**
      * create a new banana at random location at anywhere of the screen.
      */
