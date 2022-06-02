@@ -18,12 +18,12 @@ public class Monkey extends Actor
         if(Greenfoot.isKeyDown("a"))
         {
             move(-3);
-            facing = "d";
+            
         }
         if(Greenfoot.isKeyDown("d"))
         {
             move(3);
-            facing = "a";
+            
         }
     }
 }
