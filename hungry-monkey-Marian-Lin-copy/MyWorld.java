@@ -9,11 +9,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     public int score = 0;
-    Label scoreLabel;    
+    Label scoreLabel;
+    //SimpleTimer time = new SimpleTimer();
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
+    private int timer = 1000;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -29,6 +31,18 @@ public class MyWorld extends World
         
         createBanana();
     }
+    //when the time is over, the game is over.
+    public void act()
+    {
+        timer--;
+        
+        if(timer <= 0)
+        {
+            Greenfoot.stop();
+            
+            
+        }
+    }
     /**
      * when the game over, print out "Game Over".
      */
@@ -37,6 +51,7 @@ public class MyWorld extends World
         Label gameOverLabel = new Label("Game Over",100);
         addObject(gameOverLabel,300,200);
     }
+    
     
     /**
      * Increase score

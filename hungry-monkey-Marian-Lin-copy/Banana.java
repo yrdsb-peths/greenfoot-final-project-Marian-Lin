@@ -23,11 +23,6 @@ public class Banana extends Actor
         
         
         //move banana and draw the game over when the time is over.
-        MyWorld world = (MyWorld)getWorld();
-        if (SimpleTimer > 60)
-        {
-            world.gameOver();
-            world.removeObject(this);
-        }
+        
     }
 }
