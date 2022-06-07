@@ -11,6 +11,8 @@ public class Monkey extends Actor
     GreenfootSound monkeySound = new GreenfootSound("monkey.wav");
     GreenfootImage[] idlea = new GreenfootImage[8];
     GreenfootImage[] idled = new GreenfootImage[8];
+    greenfootImageA idlea = new imageA();
+    greenfootImageD idled = new imageD();
     
     String facing = "a";
     /**
@@ -62,12 +64,14 @@ public class Monkey extends Actor
         if(Greenfoot.isKeyDown("a"))
         {
             move(-3);
-            facing = "d";
+            facing = "a";
+            setImage(imageA);
         }
         if(Greenfoot.isKeyDown("d"))
         {
             move(3);
-            facing ="a";
+            facing ="d";
+            setImage(imageD);
         }
         if(Greenfoot.isKeyDown("w"))
         {
