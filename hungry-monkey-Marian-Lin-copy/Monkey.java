@@ -16,13 +16,17 @@ public class Monkey extends Actor
      */
     public Monkey()
     {
+        
         for(int i=0;i < idle.length ;i++)
         {
             idle[i] = new GreenfootImage("images/monkey" + i + ".png");
             idle[i].scale(50,50);
+            cycle++;
+            setImage(idle[cycle%(idle.length-1)]);
         }
-        setImage(idle[0]);
+        
     }
+    
     /** 
      * Act - do whatever the Monkey wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

@@ -31,6 +31,7 @@ public class MyWorld extends World
         
         createBanana();
     }
+    
     //when the time is over, the game is over.
     public void act()
     {
