@@ -11,31 +11,13 @@ public class Monkey extends Actor
     GreenfootSound monkeySound = new GreenfootSound("monkey.wav");
     GreenfootImage[] idlea = new GreenfootImage[8];
     GreenfootImage[] idled = new GreenfootImage[8];
-    greenfootImageA idlea = new imageA();
-    greenfootImageD idled = new imageD();
-    
-    String facing = "a";
-    /**
-     * coonstructor-the cose that gets run one time whenobject is created
-     */
+    GreenfootImage rightImage = new GreenfootImage("images/monkey1.png");
+    GreenfootImage leftImage = new GreenfootImage("images/monkey1.png");
     public Monkey()
     {
-        
-        for(int i=0;i < idlea.length ;i++)
-        {
-            idlea[i] = new GreenfootImage("images/monkey" + i + ".png");
-            idlea[i].scale(50,50);
-            
-        }
-        for(int i=0;i < idled.length ;i++)
-        {
-            idled[i] = new GreenfootImage("images/monkey" + i + ".png");
-            idlea[i].mirrorHorizontally();
-            idled[i].scale(50,50);
-            
-        }
-        setImage(idled[0]);
+        leftImage.mirrorHorizontally();
     }
+    String facing = "a";
     /**
      * animate the monkey
      */
@@ -65,13 +47,13 @@ public class Monkey extends Actor
         {
             move(-3);
             facing = "a";
-            setImage(imageA);
+            setImage(leftImage);
         }
         if(Greenfoot.isKeyDown("d"))
         {
             move(3);
             facing ="d";
-            setImage(imageD);
+            setImage(rightImage);
         }
         if(Greenfoot.isKeyDown("w"))
         {
@@ -103,4 +85,5 @@ public class Monkey extends Actor
         }
         
     }
+    
 }
