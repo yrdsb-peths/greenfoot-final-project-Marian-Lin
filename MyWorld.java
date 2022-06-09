@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class MyWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Marian) 
+ * @version (1st, June 2022)
  */
 public class MyWorld extends World
 {
@@ -33,6 +33,8 @@ public class MyWorld extends World
     }
     
     //when the time is over, the game is over.
+    
+    
     public void act()
     {
         timer--;
@@ -40,10 +42,12 @@ public class MyWorld extends World
         if(timer <= 0)
         {
             Greenfoot.stop();
-            
+            gameOver();
             
         }
+
     }
+
     /**
      * when the game over, print out "Game Over".
      */
