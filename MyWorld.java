@@ -34,7 +34,7 @@ public class MyWorld extends World
     
     //when the time is over, the game is over.
     
-    
+    //When time over display gameover
     public void act()
     {
         timer--;

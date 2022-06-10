@@ -13,7 +13,8 @@ public class Monkey extends Actor
     GreenfootImage[] idled = new GreenfootImage[8];
     GreenfootImage rightImage = new GreenfootImage("images/monkey1.png");
     GreenfootImage leftImage = new GreenfootImage("images/monkey1.png");
-    public Monkey()
+    
+    //make a mirror monkey 
     {
         leftImage.mirrorHorizontally();
     }
