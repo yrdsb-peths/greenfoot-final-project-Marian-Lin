@@ -96,5 +96,5 @@ target6.y=0
 version=3.0.0
 width=849
 world.lastInstantiated=TitleScreen
-xPosition=509
-yPosition=69
+xPosition=0
+yPosition=40
