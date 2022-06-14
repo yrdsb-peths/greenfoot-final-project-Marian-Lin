@@ -39,21 +39,18 @@ public class TitleScreen extends World
         Monkey monkey = new Monkey();
         addObject(monkey,479,87);
         monkey.setLocation(494,87);
-        Label label = new Label("      Use <a - and - d> to Move Left and Right",35);
+        Label label = new Label("      Use <a - and - d> to Move ",40);
         addObject(label,220,230);
         label.setLocation(276,220);
         
-        Label label2 = new Label("Use <w - and - s> to Move Up and Down",35);
+        Label label2 = new Label("  Use <w - and - s> to Move ",40);
         addObject(label2,220,257);
-        label2.setLocation(300,260);
+        label2.setLocation(297,260);
         
-        Label label3 = new Label("Press<space> to Start",35);
+        Label label3 = new Label("Press<space> to Start",40);
         addObject(label3,249,331);
-        label3.setLocation(285,300);
+        label3.setLocation(276,300);
         
-        Label label4 = new Label("When the time over the game is over",35);
-        addObject(label4,220,200);
-        label4.setLocation(300,180);
         
     }
 }
