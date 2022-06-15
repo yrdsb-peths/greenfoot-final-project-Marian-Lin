@@ -38,7 +38,19 @@ public class TitleScreen extends World
     {
         Monkey monkey = new Monkey();
         addObject(monkey,479,87);
-        monkey.setLocation(494,87);
+        monkey.setLocation(200,75);
+        
+        Banana banana = new Banana();
+        addObject(banana,479,87);
+        banana.setLocation(300,75);
+        
+        Banana banana2 = new Banana();
+        addObject(banana2,479,87);
+        banana2.setLocation(400,75);
+        
+        Banana banana3 = new Banana();
+        addObject(banana3,479,87);
+        banana3.setLocation(500,75);
         
         Label label = new Label("      Use <a - and - d> to Move ",40);
         addObject(label,220,230);

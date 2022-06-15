@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Monkey extends Actor
 {
-    GreenfootSound monkeySound = new GreenfootSound("monkey.wav");
+    GreenfootSound monkey1Sound = new GreenfootSound("monkey1.wav");
+    GreenfootSound monkey2Sound = new GreenfootSound("monkey2.wav");
     GreenfootImage[] idlea = new GreenfootImage[8];
     GreenfootImage[] idled = new GreenfootImage[8];
     GreenfootImage rightImage = new GreenfootImage("images/monkey1.png");
@@ -81,7 +82,15 @@ public class Monkey extends Actor
             MyWorld world =(MyWorld) getWorld();
             world.createBanana();
             world.increaseScore();
-            monkeySound.play();
+            monkey1Sound.play();
+        }
+        if(isTouching(Beer.class))
+        {
+            removeTouching(Beer.class);
+            MyWorld world =(MyWorld) getWorld();
+            world.createBeer();
+            world.deleteScore();
+            monkey2Sound.play();
         }
     }
     

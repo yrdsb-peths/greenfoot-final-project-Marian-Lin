@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
+    GreenfootSound gameoverSound = new GreenfootSound("gameover.mp3");
     public int score = 0;
     Label scoreLabel;
     //SimpleTimer time = new SimpleTimer();
@@ -40,6 +41,7 @@ public class MyWorld extends World
         if(timer <= 0)
         {
             Greenfoot.stop();
+            gameoverSound.play();
             gameOver();
             
         }
@@ -65,6 +67,14 @@ public class MyWorld extends World
         scoreLabel.setValue(score);
     }
     /**
+     * Delete score
+     */
+    public void deleteScore()
+    {
+        score--;
+        scoreLabel.setValue(score);
+    }
+    /**
      * create a new banana at random location at anywhere of the screen.
      */
     public void createBanana()
@@ -73,5 +83,15 @@ public class MyWorld extends World
         int x =Greenfoot.getRandomNumber(600);
         int y =Greenfoot.getRandomNumber(200);
         addObject(banana,x,y);
+    }
+    /**
+     * create a new beer at random location at anywhere of the screen.
+     */
+    public void createBeer()
+    {
+        Beer beer = new Beer();
+        int x =Greenfoot.getRandomNumber(600);
+        int y =Greenfoot.getRandomNumber(200);
+        addObject(beer,x,y);
     }
 }
