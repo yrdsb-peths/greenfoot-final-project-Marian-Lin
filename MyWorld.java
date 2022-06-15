@@ -32,9 +32,7 @@ public class MyWorld extends World
         createBanana();
     }
     
-    //when the time is over, the game is over.
-    
-    //When time over display gameover
+    //When time over, gameover
     public void act()
     {
         timer--;

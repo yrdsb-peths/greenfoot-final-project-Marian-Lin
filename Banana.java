@@ -20,9 +20,6 @@ public class Banana extends Actor
         int y = getY();
         setLocation(x,y);
         
-        //banana can only appear for 2 second.
-        
-        
         //move banana and draw the game over when the time is over.
         MyWorld world = (MyWorld) getWorld();
         if(timer <= 0)

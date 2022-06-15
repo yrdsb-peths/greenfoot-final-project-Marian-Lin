@@ -39,6 +39,7 @@ public class TitleScreen extends World
         Monkey monkey = new Monkey();
         addObject(monkey,479,87);
         monkey.setLocation(494,87);
+        
         Label label = new Label("      Use <a - and - d> to Move ",40);
         addObject(label,220,230);
         label.setLocation(276,220);
@@ -50,7 +51,5 @@ public class TitleScreen extends World
         Label label3 = new Label("Press<space> to Start",40);
         addObject(label3,249,331);
         label3.setLocation(276,300);
-        
-        
     }
 }

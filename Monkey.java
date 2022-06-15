@@ -75,7 +75,6 @@ public class Monkey extends Actor
      */
     public void eat()
     {
-        
         if(isTouching(Banana.class))
         {
             removeTouching(Banana.class);
@@ -84,7 +83,6 @@ public class Monkey extends Actor
             world.increaseScore();
             monkeySound.play();
         }
-        
     }
     
 }
