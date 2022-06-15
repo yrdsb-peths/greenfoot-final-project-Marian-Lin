@@ -31,6 +31,7 @@ public class MyWorld extends World
         addObject(scoreLabel,40,40);
         
         createBanana();
+        createBeer();
     }
     
     //When time over, gameover
