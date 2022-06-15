@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  *  TitleScreen
  * 
  * @author (Marian) 
- * @version (1st, June 2022)
+ * @version (June 2022)
  */
 public class TitleScreen extends World
 {
