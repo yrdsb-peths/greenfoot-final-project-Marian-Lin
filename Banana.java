@@ -21,10 +21,10 @@ public class Banana extends Actor
         setLocation(x,y);
         
         //move banana and draw the game over when the time is over.
-        MyWorld world1 = (MyWorld) getWorld();
+        MyWorld world = (MyWorld) getWorld();
         if(timer <= 0)
         {
-            world1.removeObject(this);
+            world.removeObject(this);
         }
     }
 }

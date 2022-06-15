@@ -20,11 +20,11 @@ public class Beer extends Actor
         int y = getY();
         setLocation(x,y);
         
-        //move banana and draw the game over when the time is over.
-        MyWorld world2 = (MyWorld) getWorld();
+        //move beer and draw the game over when the time is over.
+        MyWorld world = (MyWorld) getWorld();
         if(timer <= 0)
         {
-            world2.removeObject(this);
+            world.removeObject(this);
         }
     }
 }

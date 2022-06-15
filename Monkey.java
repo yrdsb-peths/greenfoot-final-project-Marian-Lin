@@ -79,17 +79,17 @@ public class Monkey extends Actor
         if(isTouching(Banana.class))
         {
             removeTouching(Banana.class);
-            MyWorld world1 =(MyWorld) getWorld();
-            world1.createBanana();
-            world1.increaseScore();
+            MyWorld world =(MyWorld) getWorld();
+            world.createBanana();
+            world.increaseScore();
             monkey1Sound.play();
         }
         if(isTouching(Beer.class))
         {
             removeTouching(Beer.class);
-            MyWorld world2 =(MyWorld) getWorld();
-            world2.createBeer();
-            world2.deleteScore();
+            MyWorld world =(MyWorld) getWorld();
+            world.createBeer();
+            world.deleteScore();
             monkey2Sound.play();
         }
     }
