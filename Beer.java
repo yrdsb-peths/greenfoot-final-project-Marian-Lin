@@ -21,7 +21,7 @@ public class Beer extends Actor
         setLocation(x,y);
         
         //move beer and draw the game over when the time is over.
-        MyWorld world = (MyWorld) getWorld();
+        World world = getWorld();
         if(timer <= 0)
         {
             world.removeObject(this);
